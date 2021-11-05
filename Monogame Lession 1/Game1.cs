@@ -11,6 +11,7 @@ namespace Monogame_Lession_1
 
         Texture2D dinoTexture;
         Texture2D rockTexture;
+        Texture2D jungleTexture;
 
 
 
@@ -41,7 +42,8 @@ namespace Monogame_Lession_1
 
             // TODO: use this.Content to load your game content here
             dinoTexture = Content.Load<Texture2D>("Dino");
-            rockTexture = Content.Load<Texture2D>("Rock 1");
+            rockTexture = Content.Load<Texture2D>("RockRock");
+            jungleTexture = Content.Load<Texture2D>("Jungle");
         }
 
         protected override void Update(GameTime gameTime)
@@ -56,16 +58,15 @@ namespace Monogame_Lession_1
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Blue);
+            GraphicsDevice.Clear(Color.White);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(rockTexture, new Vector2(100, 100), Color.White);
-            _spriteBatch.Draw(dinoTexture, new Vector2(550, 70), Color.White);
-            _spriteBatch.Draw(dinoTexture, new Vector2(300, 50), Color.White);
-
-           
+            _spriteBatch.Draw(jungleTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(rockTexture, new Vector2(100, 600), Color.White);
+            _spriteBatch.Draw(dinoTexture, new Vector2(550, 570), Color.White);
+            _spriteBatch.Draw(dinoTexture, new Vector2(300, 550), Color.White);
 
             _spriteBatch.End();
 
